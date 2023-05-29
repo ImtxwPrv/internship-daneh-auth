@@ -38,23 +38,28 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return Scaffold(
+      body: Container(
+        decoration: const BoxDecoration(
+          image: DecorationImage(
+              image: AssetImage("assets/D-Ace.jpeg"), fit: BoxFit.fill),
+        ),
         height: MediaQuery.of(context).size.height,
         width: MediaQuery.of(context).size.width,
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Padding(
               padding: const EdgeInsets.all(24),
-              child: Container(
-                color: Colors.amber,
-                height: 300,
-                width: 400,
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(20), // Image border
+                child: Image.asset("assets/naruto.webp", fit: BoxFit.cover),
               ),
-            )
+            ),
           ],
         ),
+      ),
     );
   }
 }
