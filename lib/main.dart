@@ -196,11 +196,11 @@ class _MyHomePageState extends State<MyHomePage> {
                             children: [
                               Image(
                                 image: AssetImage(
-                                    "assets/tokyo.jpg"),
+                                    "assets/death note.png"),
                                 width: 92,
                               ),
                               Text(
-                                "Tokyo Ghol",
+                                "Death Note",
                                 style: TextStyle(
                                   fontWeight: FontWeight.bold,
                                   fontSize: 22,
