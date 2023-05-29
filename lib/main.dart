@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 
 void main() {
@@ -39,25 +41,186 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
-        decoration: const BoxDecoration(
-          image: DecorationImage(
-              image: AssetImage("assets/D-Ace.jpeg"), fit: BoxFit.fill),
-        ),
-        height: MediaQuery.of(context).size.height,
-        width: MediaQuery.of(context).size.width,
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            Padding(
-              padding: const EdgeInsets.all(24),
-              child: ClipRRect(
-                borderRadius: BorderRadius.circular(20), // Image border
-                child: Image.asset("assets/naruto.webp", fit: BoxFit.cover),
+      body: SingleChildScrollView(
+        child: Container(
+          decoration: const BoxDecoration(
+            image: DecorationImage(
+                image: AssetImage("assets/D-Ace.jpeg"), fit: BoxFit.fill),
+          ),
+          height: MediaQuery.of(context).size.height,
+          width: MediaQuery.of(context).size.width,
+          child: const Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Padding(
+                padding: EdgeInsets.all(24),
+                child: SizedBox(
+                  height: 60,
+                  child: Card(
+                    child: Center(
+                      child: Text(
+                        "Anime World",
+                        style: TextStyle(
+                          color: Color.fromARGB(255, 65, 65, 65),
+                          fontWeight: FontWeight.bold,
+                          fontSize: 24,
+                        ),
+                      ),
+                    ),
+                    color: Color.fromARGB(255, 243, 226, 33),
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.all(Radius.circular(24))),
+                    elevation: 10,
+                  ),
+                ),
               ),
-            ),
-          ],
+              Padding(
+                padding: EdgeInsets.all(24),
+                child: Image(
+                  image: AssetImage("assets/naruto.webp"),
+                ),
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Column(
+                    children: [
+                      SizedBox(
+                        width: 150,
+                        height: 200,
+                        child: Card(
+                          color: Colors.white,
+                          elevation: 2,
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.spaceAround,
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              Image(
+                                image:
+                                    AssetImage("assets/Naruto Vector 01.jpg"),
+                                width: 130,
+                              ),
+                              Text(
+                                "Naruto",
+                                style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 22,
+                                ),
+                              ),
+                              Image(
+                                image:
+                                    AssetImage("assets/Naruto Vector 02.jpg"),
+                                width: 140,
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                      SizedBox(
+                        width: 150,
+                        height: 200,
+                        child: Card(
+                          color: Colors.white,
+                          elevation: 2,
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              Image(
+                                image: AssetImage(
+                                    "assets/One Piece Vector 01.jpg"),
+                                width: 80,
+                              ),
+                              Text(
+                                "One Piece",
+                                style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 22,
+                                ),
+                              ),
+                              Image(
+                                image:
+                                    AssetImage("assets/Naruto Vector 02.jpg"),
+                                width: 140,
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                  Column(
+                    children: [
+                      SizedBox(
+                        width: 150,
+                        height: 200,
+                        child: Card(
+                          color: Colors.white,
+                          elevation: 2,
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              Image(
+                                image: AssetImage(
+                                    "assets/tokyo.jpg"),
+                                width: 92,
+                              ),
+                              Text(
+                                "Tokyo Ghol",
+                                style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 22,
+                                ),
+                              ),
+                              Image(
+                                image:
+                                    AssetImage("assets/Naruto Vector 02.jpg"),
+                                width: 140,
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                      SizedBox(
+                        width: 150,
+                        height: 200,
+                        child: Card(
+                          color: Colors.white,
+                          elevation: 2,
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              Image(
+                                image: AssetImage(
+                                    "assets/tokyo.jpg"),
+                                width: 92,
+                              ),
+                              Text(
+                                "Tokyo Ghol",
+                                style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 22,
+                                ),
+                              ),
+                              Image(
+                                image:
+                                    AssetImage("assets/Naruto Vector 02.jpg"),
+                                width: 140,
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+            ],
+          ),
         ),
       ),
     );
