@@ -27,7 +27,7 @@ class _ChallengesPageState extends State<ChallengesPage> {
             Padding(
               padding: EdgeInsets.all(24),
               child: Text(
-                ("chalenges"),
+                ("chalengess"),
                 style: TextStyle(
                   color: Colors.white,
                   fontWeight: FontWeight.bold,
@@ -86,7 +86,7 @@ class _ChallengesPageState extends State<ChallengesPage> {
                             borderRadius: BorderRadius.all(
                               Radius.circular(50),
                             ),
-                          ) // ),
+                          ),
                           ),
                     ),
                     SizedBox(
@@ -94,12 +94,15 @@ class _ChallengesPageState extends State<ChallengesPage> {
                       height: 40,
                       child: Card(
                         color: Colors.white,
-                        // shape: ContinuousRectangleBorder(
-                        //   // borderRadius:BorderRadiusGeometry.all(5),
-                        // ),
+                        shape: ContinuousRectangleBorder(
+                            borderRadius: BorderRadius.all(
+                              Radius.circular(50),
+                            ),
                       ),
                     ),
-                  ]),
+                      ), 
+                  ],
+                  ),
             ),
           ],
         ),
