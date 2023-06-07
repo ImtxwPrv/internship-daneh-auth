@@ -36,54 +36,51 @@ class _OtpPageState extends State<OtpPage> {
                 height: 400,
               ),
               SizedBox(
-                height: 100,
+                height: 40,
               ),
               Text(
                 "کد فعال سازی را وارد کنید",
-              style: TextStyle(
-                fontSize: 24,
-                fontWeight: FontWeight.bold,
+                style: TextStyle(
+                  fontSize: 24,
+                  fontWeight: FontWeight.bold,
+                ),
               ),
+              SizedBox(
+                height: 40,
               ),
               Text(
-                "ورود شماره موبایل",
-              style: TextStyle(
-                fontSize: 16,
-                fontWeight: FontWeight.w600
+                "تغییر شماره موبایل",
+                style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
               ),
+              SizedBox(
+                height: 40,
+              ),
+
+                Padding(
+                padding: EdgeInsets.symmetric(horizontal: 10.0),
+                child: Container(
+                  height: 1.0,
+                  width: 50.0,
+                  color: Color.fromRGBO(0, 0, 0, 100),
+                ),
+              ),
+              
+              SizedBox(
+                height: 60,
+              ),
+              Text(
+                " کد را هنوز دریافت نکرده اید ",
+                style: TextStyle(fontSize: 16, fontWeight: FontWeight.w200),
               ),
               SizedBox(
                 height: 5,
               ),
-              SizedBox(
-                height: MediaQuery.of(context).size.height / 14,
-                width: (MediaQuery.of(context).size.width / 4) * 3,
-                child: Card(
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(40)),
-                ),
-              ),
-              SizedBox(
-                height: 10,
-              ),
-              SizedBox(
-                height: MediaQuery.of(context).size.height / 14,
-                width: (MediaQuery.of(context).size.width / 4) * 3,
-                child: Card(
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(40)),
-                  elevation: 5,
-                  color: Color.fromRGBO(254, 192, 192, 1),
-                  child: Center(
-                    child: Text(
-                      " دریافت کد ",
-                      style: TextStyle(
-                        color: Color.fromRGBO(0, 0, 0, 50),
-                        fontWeight: FontWeight.bold,
-                        fontSize: 24,
-                      ),
-                    ),
-                  ),
+              Padding(
+                padding: EdgeInsets.symmetric(horizontal: 10.0),
+                child: Container(
+                  height: 1.0,
+                  width: 300.0,
+                  color: Color.fromRGBO(253, 98, 111, 0.616),
                 ),
               ),
             ],
