@@ -41,36 +41,42 @@ class _OtpPageState extends State<OtpPage> {
               Text(
                 "کد فعال سازی را وارد کنید",
                 style: TextStyle(
-                  fontSize: 24,
+                  fontSize: 20,
                   fontWeight: FontWeight.bold,
+                  fontFamily: 'Hiva',
                 ),
               ),
               SizedBox(
                 height: 40,
               ),
+              Align(
+                alignment: Alignment.centerRight,
+                child:
               Text(
                 "تغییر شماره موبایل",
                 style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
               ),
+              ),
               SizedBox(
                 height: 40,
               ),
-
-                Padding(
-                padding: EdgeInsets.symmetric(horizontal: 10.0),
+              Padding(
+                padding: EdgeInsets.symmetric (horizontal: 10.0),
                 child: Container(
                   height: 1.0,
                   width: 50.0,
                   color: Color.fromRGBO(0, 0, 0, 100),
                 ),
               ),
-              
               SizedBox(
                 height: 60,
               ),
               Text(
                 " کد را هنوز دریافت نکرده اید ",
-                style: TextStyle(fontSize: 16, fontWeight: FontWeight.w200),
+                style: TextStyle(
+                  fontSize: 16,
+                  fontWeight: FontWeight.w200,
+                ),
               ),
               SizedBox(
                 height: 5,
