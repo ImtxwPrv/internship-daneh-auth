@@ -1,5 +1,5 @@
 // import 'package:demo_text_fields/page/challenges_page.dart';
-import 'package:demo_text_fields/page/register_page.dart';
+import 'package:demo_text_fields/page/flutter_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       title: 'Flutter Demo',
-      home: RegisterPage(),
+      home: Flutter_page(),
     );
   }
 }
