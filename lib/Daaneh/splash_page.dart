@@ -12,7 +12,7 @@ class _SplashPageState extends State<SplashPage> {
 
   static _loadSettings() async {
     print("starting loading settings");
-    await Future.delayed(Duration(seconds: 1));
+    await Future.delayed(const Duration(seconds: 1));
     print("finished loading settings");
   }
   // @override
@@ -22,7 +22,7 @@ class _SplashPageState extends State<SplashPage> {
     return Scaffold(
       body: SingleChildScrollView(
         child: Container(
-          color: Color.fromRGBO(255, 249, 248, 100),
+          color: const Color.fromRGBO(255, 249, 248, 100),
           height: MediaQuery.of(context).size.height,
           width: MediaQuery.of(context).size.width,
           child: Column(
@@ -35,9 +35,9 @@ class _SplashPageState extends State<SplashPage> {
                 width: (MediaQuery.of(context).size.width / 4) * 3,
                 child: Card(
                   shape:  RoundedRectangleBorder(borderRadius: BorderRadius.circular(40)),
-                  color: Color.fromARGB(213, 69, 6, 196),
+                  color: const Color.fromARGB(213, 69, 6, 196),
                   elevation: 5,
-                  child: Center(
+                  child: const Center(
                     child: Text(
                       " !به اپلیکیشن دانه خوش آمدی",
                       style: TextStyle(

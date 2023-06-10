@@ -10,7 +10,7 @@ class RegisterPage extends StatefulWidget {
 class _RegisterPageState extends State<RegisterPage> {
   static _loadSettings() async {
     print("starting loading settings");
-    await Future.delayed(Duration(seconds: 1));
+    await Future.delayed(const Duration(seconds: 1));
     print("finished loading settings");
   }
   // @override
@@ -20,14 +20,14 @@ class _RegisterPageState extends State<RegisterPage> {
     return Scaffold(
       body: SingleChildScrollView(
         child: Container(
-          color: Color.fromRGBO(255, 249, 248, 1),
+          color: const Color.fromRGBO(255, 249, 248, 1),
           height: MediaQuery.of(context).size.height,
           width: MediaQuery.of(context).size.width,
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              SizedBox(
+              const SizedBox(
                 height: 60,
               ),
               Image.asset(
@@ -35,20 +35,20 @@ class _RegisterPageState extends State<RegisterPage> {
                 width: 380,
                 height: 380,
               ),
-              Text(
+              const Text(
                 " ثبت نام ",
                 style: TextStyle(
                     fontSize: 26,
                     fontWeight: FontWeight.w600,
                     fontFamily: 'Hiva'),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 35,
               ),
               SizedBox(
                 height: MediaQuery.of(context).size.height / 14,
                 width: (MediaQuery.of(context).size.width / 4) * 3,
-                child: Card(
+                child: const Card(
                   elevation: 5,
                   shape: Border(
                       right: BorderSide(
@@ -65,13 +65,13 @@ class _RegisterPageState extends State<RegisterPage> {
                   ),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
               SizedBox(
                 height: MediaQuery.of(context).size.height / 14,
                 width: (MediaQuery.of(context).size.width / 4) * 3,
-                child: Card(
+                child: const Card(
                   elevation: 5,
                   shape: Border(
                       right: BorderSide(
@@ -88,13 +88,13 @@ class _RegisterPageState extends State<RegisterPage> {
                   ),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
               SizedBox(
                 height: MediaQuery.of(context).size.height / 14,
                 width: (MediaQuery.of(context).size.width / 4) * 3,
-                child: Card(
+                child: const Card(
                   elevation: 5,
                   shape: Border(
                       right: BorderSide(
@@ -111,13 +111,13 @@ class _RegisterPageState extends State<RegisterPage> {
                   ),
                 ),
               ),
-                SizedBox(
+                const SizedBox(
                 height: 20,
               ),
               SizedBox(
                 height: MediaQuery.of(context).size.height / 14,
                 width: (MediaQuery.of(context).size.width / 4) * 3,
-                child: Card(
+                child: const Card(
                   elevation: 5,
                   color: Color.fromRGBO(254, 192, 192, 1),
                   child: Center(

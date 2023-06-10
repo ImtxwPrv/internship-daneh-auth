@@ -10,7 +10,7 @@ class LoginPage extends StatefulWidget {
 class _LoginPageState extends State<LoginPage> {
   static _loadSettings() async {
     print("starting loading settings");
-    await Future.delayed(Duration(seconds: 1));
+    await Future.delayed(const Duration(seconds: 1));
     print("finished loading settings");
   }
   // @override
@@ -20,14 +20,14 @@ class _LoginPageState extends State<LoginPage> {
     return Scaffold(
       body: SingleChildScrollView(
         child: Container(
-          color: Color.fromRGBO(255, 249, 248, 100),
+          color: const Color.fromRGBO(255, 249, 248, 100),
           height: MediaQuery.of(context).size.height,
           width: MediaQuery.of(context).size.width,
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              SizedBox(
+              const SizedBox(
                 height: 50,
               ),
               Image.asset(
@@ -35,17 +35,17 @@ class _LoginPageState extends State<LoginPage> {
                 width: 400,
                 height: 400,
               ),
-              SizedBox(
+              const SizedBox(
                 height: 100,
               ),
-              Text(
+              const Text(
                 "ورود شماره موبایل",
               style: TextStyle(
                 fontSize: 16,
                 fontWeight: FontWeight.w600
               ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 5,
               ),
               SizedBox(
@@ -56,7 +56,7 @@ class _LoginPageState extends State<LoginPage> {
                       borderRadius: BorderRadius.circular(40)),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
               SizedBox(
@@ -66,8 +66,8 @@ class _LoginPageState extends State<LoginPage> {
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(40)),
                   elevation: 5,
-                  color: Color.fromRGBO(254, 192, 192, 1),
-                  child: Center(
+                  color: const Color.fromRGBO(254, 192, 192, 1),
+                  child: const Center(
                     child: Text(
                       " دریافت کد ",
                       style: TextStyle(

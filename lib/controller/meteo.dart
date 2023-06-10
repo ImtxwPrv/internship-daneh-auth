@@ -1,6 +1,4 @@
-import 'dart:ui';
 
-import 'package:demo_text_fields/main.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -59,6 +57,10 @@ class _MyHomePageState extends State<MyHomePage> {
                 child: SizedBox(
                   height: 60,
                   child: Card(
+                    color: Color.fromARGB(255, 243, 226, 33),
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.all(Radius.circular(24))),
+                    elevation: 10,
                     child: Center(
                       child: Text(
                         "Anime World",
@@ -69,10 +71,6 @@ class _MyHomePageState extends State<MyHomePage> {
                         ),
                       ),
                     ),
-                    color: Color.fromARGB(255, 243, 226, 33),
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.all(Radius.circular(24))),
-                    elevation: 10,
                   ),
                 ),
               ),
