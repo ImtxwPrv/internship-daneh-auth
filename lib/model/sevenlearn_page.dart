@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:get/utils.dart';
+// import 'package:get/utils.dart';
 
 class SevenlearnPage extends StatelessWidget {
   const SevenlearnPage({Key? key}) : super(key: key);
@@ -97,91 +97,105 @@ class SevenlearnPage extends StatelessWidget {
             ],
           ),
         ),
-        Padding(
-          padding: const EdgeInsets.fromLTRB(32, 0, 32, 8),
+        Center(
           child: Wrap(
+            spacing: 12,
+            runSpacing: 12,
             direction: Axis.horizontal,
             children: [
-              Container(
-                width: 110,
-                height: 110,
-                decoration: BoxDecoration(
-                    color: Color.fromARGB(20, 255, 255, 255),
-                    borderRadius: BorderRadius.circular(16)),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Image.asset(
-                      'assets/team01.png',
-                      height: 70,
-                      width: 70,
-                    ),
-                    SizedBox(height: 6),
-                    Text('Ajax', style: TextStyle(fontWeight: FontWeight.w800,fontSize: 14),),
-                  ],
-                ),
-              ),
-              Container(
-                width: 100,
-                height: 100,
-                decoration: BoxDecoration(
-                    color: Color.fromARGB(20, 255, 255, 255),
-                    borderRadius: BorderRadius.circular(16)),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Image.asset(
-                      'assets/team01.png',
-                      height: 60,
-                      width: 60,
-                    ),
-                    SizedBox(height: 6),
-                    Text('Ajax', style: TextStyle(fontWeight: FontWeight.w800)),
-                  ],
-                ),
-              ),
-              Container(
-                width: 100,
-                height: 100,
-                decoration: BoxDecoration(
-                    color: Color.fromARGB(20, 255, 255, 255),
-                    borderRadius: BorderRadius.circular(16)),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Image.asset(
-                      'assets/team01.png',
-                      height: 60,
-                      width: 60,
-                    ),
-                    SizedBox(height: 6),
-                    Text('Ajax', style: TextStyle(fontWeight: FontWeight.w800)),
-                  ],
-                ),
-              ),
-              Container(
-                width: 100,
-                height: 100,
-                decoration: BoxDecoration(
-                    color: Color.fromARGB(20, 255, 255, 255),
-                    borderRadius: BorderRadius.circular(16)),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Image.asset(
-                      'assets/team01.png',
-                      height: 60,
-                      width: 60,
-                    ),
-                    SizedBox(height: 6),
-                    Text('Ajax', style: TextStyle(fontWeight: FontWeight.w800)),
-                  ],
-                ),
-              ),
+              Skill(
+                  title: 'Ajax',
+                  imagepath: 'assets/team01.png',
+                  shadowcColor: Colors.redAccent.shade400,
+                  isActive: true),
+              Skill(
+                  title: 'Juventus',
+                  imagepath: 'assets/team02.webp',
+                  shadowcColor: Colors.black,
+                  isActive: true),
+              Skill(
+                  title: 'Inter',
+                  imagepath: 'assets/team03.webp',
+                  shadowcColor: Colors.blueGrey,
+                  isActive: true),
+              Skill(
+                  title: 'Barcelona',
+                  imagepath: 'assets/team04.png',
+                  shadowcColor: Colors.yellowAccent,
+                  isActive: true),
+              Skill(
+                  title: 'Milan',
+                  imagepath: 'assets/team05.png',
+                  shadowcColor: Colors.redAccent,
+                  isActive: true),
+              Skill(
+                  title: 'Paris',
+                  imagepath: 'assets/team06.png',
+                  shadowcColor: Colors.blueAccent.shade700,
+                  isActive: true),
+              Skill(
+                  title: 'Manchester',
+                  imagepath: 'assets/team07.webp',
+                  shadowcColor: Colors.redAccent,
+                  isActive: true),
+              Skill(
+                  title: 'Galaxy',
+                  imagepath: 'assets/team08.png',
+                  shadowcColor: Colors.redAccent,
+                  isActive: true),
             ],
           ),
         ),
       ]),
+    );
+  }
+}
+
+class Skill extends StatefulWidget {
+  final String title;
+  final String imagepath;
+  final Color shadowcColor;
+  final bool isActive;
+
+  const Skill({
+    super.key,
+    required this.title,
+    required this.imagepath,
+    required this.shadowcColor,
+    required this.isActive,
+  });
+  
+  @override
+  State<Skill> createState() => _SkillState();
+}
+
+class _SkillState extends State<Skill> {
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: 110,
+      height: 110,
+      decoration: widget.isActive
+          ? BoxDecoration(
+              color: Color.fromARGB(20, 255, 255, 255),
+              borderRadius: BorderRadius.circular(16))
+          : null,
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Image.asset(
+            widget.imagepath,
+            height: 70,
+            width: 70,
+          ),
+          SizedBox(height: 7),
+          Text(
+            widget.title,
+            style: TextStyle(fontWeight: FontWeight.w800, fontSize: 14),
+          ),
+        ],
+      ),
     );
   }
 }
