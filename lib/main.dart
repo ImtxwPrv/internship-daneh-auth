@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import 'Daaneh/otp_page.dart';
-import 'Daaneh/login_page.dart';
-import 'Daaneh/splash_page.dart';
-import 'Daaneh/register_page.dart';
+// import 'Daaneh/otp_page.dart';
+// import 'Daaneh/login_page.dart';
+// import 'Daaneh/splash_page.dart';
+// import 'Daaneh/register_page.dart';
 import 'model/sevenlearn_page.dart';
 
 void main() {
@@ -21,14 +21,18 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       theme: ThemeData(
         primarySwatch: Colors.blue,
+        primaryColor: Colors.red,
         brightness: Brightness.dark,
+        dividerTheme: DividerThemeData(
+          thickness: 1,
+        ),
         scaffoldBackgroundColor: Color.fromARGB(255, 30, 30, 30),
         appBarTheme: AppBarTheme(backgroundColor: Colors.black),
         textTheme: GoogleFonts.latoTextTheme(
           TextTheme(
             headline6: TextStyle(fontWeight: FontWeight.w900),
             bodyText1: TextStyle(fontSize: 22),
-            bodyText2: TextStyle(fontSize: 16),
+            bodyText2: TextStyle(fontSize: 14,color: Color.fromARGB(200, 255, 255, 255)),
             subtitle1: TextStyle(fontWeight: FontWeight.w900),
             subtitle2: TextStyle(fontWeight: FontWeight.w300),
           ),
